@@ -1,0 +1,13 @@
+.app-main {
+  text-align: center;
+  width: 100vw;
+}
+
+.app-main h1 {
+  font-size: 124px;
+  color: cornflowerblue;
+}
+
+.app-main p {
+  font-size: 24px;
+}

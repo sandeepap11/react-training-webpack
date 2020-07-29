@@ -5,6 +5,11 @@ import "./index.css";
 import App from "./App";
 import { store } from "./redux/store";
 
+require.ensure(["lodash"], function() {
+  var lodash = require("lodash");
+  console.log("Unused loadash code", lodash.add(1, 2));
+});
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

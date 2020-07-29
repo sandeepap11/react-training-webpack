@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   module: {
@@ -25,10 +26,7 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      },
+
       {
         test: /\.svg$/,
         use: "file-loader"
@@ -39,6 +37,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
-    })
+    }),
+    new webpack.EnvironmentPlugin(["NODE_ENV"])
   ]
 };

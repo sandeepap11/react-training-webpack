@@ -7,9 +7,17 @@ const path = require("path");
 
 module.exports = env =>
   merge(baseConfig(env), {
+    entry: {
+      index: "./src/index.js"
+    },
+
     output: {
-      path: path.resolve(__dirname, "build"),
-      filename: "bundle.js"
+      // `filename` provides a template for naming your bundles (remember to use `[name]`)
+      filename: "[name].bundle.js",
+      // `chunkFilename` provides a template for naming code-split bundles (optional)
+      chunkFilename: "[name].bundle.js",
+      // `path` is the folder where Webpack will place your bundles
+      path: path.resolve(__dirname, "build")
     },
 
     module: {

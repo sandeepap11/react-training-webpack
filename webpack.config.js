@@ -38,7 +38,10 @@ module.exports = env => {
               "@babel/preset-env",
               "@babel/react",
               {
-                plugins: ["@babel/plugin-syntax-jsx"]
+                plugins: [
+                  "@babel/plugin-syntax-jsx",
+                  "@babel/plugin-proposal-class-properties"
+                ]
               }
             ]
           }

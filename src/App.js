@@ -1,18 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
+import Posts from "./components/Posts";
 
-class App extends Component {
+class App extends React.Component {
   render() {
-    return (
-      <div className="app-main">
-        <h1>Hello Webpack World!</h1>
-        <p>This was not created using Create React App</p>
-        <p style={{ color: "maroon", fontSize: "32px" }}>
-          The environment is {process.env.ENVIRONMENT}
-        </p>
-        <p>The API URL is {process.env.API_URL}</p>
-      </div>
-    );
+    return <Posts />;
   }
 }
 

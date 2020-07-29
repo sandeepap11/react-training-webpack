@@ -1,13 +1,136 @@
-.app-main {
-  text-align: center;
+div.posts-main {
+  margin: 10px;
+}
+
+div.posts-main > ul {
+  padding-top: 300px;
+  background-color: white;
+}
+
+div.posts-main > ul li {
+  position: relative;
+  background-color: black;
+  color: white;
+  list-style: none;
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+div.posts-main > ul li h1 {
+  color: rgb(0, 140, 255);
+  font-weight: 400;
+  font-size: 48px;
+}
+
+div.posts-main > ul li p {
+  font-weight: 200;
+  font-size: 24px;
+}
+
+div.posts-main > h1 {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  margin: 30px;
+  font-size: 200px;
+  font-weight: 100;
+  color: rebeccapurple;
   width: 100vw;
 }
 
-.app-main h1 {
-  font-size: 124px;
-  color: cornflowerblue;
+button.create-post {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  font-size: 60px;
+  position: fixed;
+  top: 85%;
+  left: 85%;
+  background-color: rebeccapurple;
+  color: white;
+  z-index: 1;
+  border: none;
 }
 
-.app-main p {
-  font-size: 24px;
+.post-form {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  background-color: black;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 300px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.post-form h1 {
+  text-align: center;
+  font-size: 80px;
+  font-weight: 200;
+  color: rebeccapurple;
+  margin: 20px;
+}
+
+.post-form input,
+.post-form textarea,
+.form-submit-button {
+  padding: 10px 20px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.post-form textarea {
+  height: 200px;
+}
+
+.form-submit-button {
+  height: 40px;
+  width: 300px;
+  color: white;
+  background-color: rebeccapurple;
+  border: none;
+}
+
+.form-close-button {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: none;
+  color: white;
+  background-color: maroon;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.form-close-button:after {
+  content: "X";
+}
+
+.loading-modal {
+  position: fixed;
+  font-size: 40px;
+  color: grey;
+  height: 200px;
+  min-width: 400px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  border: 5px solid rebeccapurple;
+  border-radius: 20px;
 }

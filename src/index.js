@@ -7,7 +7,7 @@ import { store } from "./redux/store";
 
 require.ensure(["lodash"], function() {
   var lodash = require("lodash");
-  console.log("Unused loadash code", lodash.add(1, 2));
+  // Use this for lazy loading code
 });
 
 ReactDOM.render(

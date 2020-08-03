@@ -6,16 +6,23 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
-        options: {
-          presets: [
-            "@babel/preset-env",
-            "@babel/react",
-            {
-              plugins: ["@babel/plugin-syntax-jsx"]
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                "@babel/preset-env",
+                "@babel/react",
+                {
+                  plugins: ["@babel/plugin-syntax-jsx"]
+                }
+              ]
             }
-          ]
-        }
+          },
+          {
+            loader: "eslint-loader"
+          }
+        ]
       },
       {
         test: /\.html$/,

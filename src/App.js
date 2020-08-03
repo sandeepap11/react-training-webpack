@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import AddComp from "./components/AddComp";
 
 class App extends Component {
   render() {
